@@ -1,0 +1,32 @@
+take command line argument
+
+if no argument or more than 1 argument:
+    display "Enter only 1 key"
+        return error code 1
+
+else validate the key:
+    
+    if length of key is less than or greater than 26:
+        display "Enter a key of exactly 26 letters"
+        return error code 1
+    
+    else check key contents:
+        for every character in key:
+            if character is digit:
+                display "Enter a key consisting of letters only"
+                return error code 1
+        for every character in key count how many times it appears in key
+            if character in key more than once:
+                display "Enter each letter only once"
+                return error code 1
+                
+    else run program
+        prompt user for plaintext
+        
+        for every character in plaintext:
+            0 index plaintext character
+            use plaintext character index to get key character
+            substitute plaintext character for key character
+        
+        display ciphertext
+        return no error message 0

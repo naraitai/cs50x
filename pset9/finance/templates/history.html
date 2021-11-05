@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+    <table class="table">
+        <tr>
+            <td>Symbol</td>
+            <td>Shares</td>
+            <td>Price</td>
+            <td>Transacted</td>
+        </tr>
+
+        {% for transaction in history %}
+        <tr>
+            <td>{{ history[loop.index - 1].symbol }}</td>
+            <td> {{ history[loop.index - 1].shares }}</td>
+            <td> {{ history[loop.index - 1].price }}</td>
+            <td> {{ history[loop.index - 1].date }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+{% endblock %}

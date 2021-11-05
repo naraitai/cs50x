@@ -1,0 +1,88 @@
+// Grayscale
+** Take an image.
+** Loop through each pixel.
+** Computer average RGB value per pixel.
+** Set RGB values to the respecting average value.
+
+for every row
+    for every column
+        round red value plus green value plus blue value divided by 3
+        set image red value to average
+        set image green value to average
+        set image blue value to average
+
+
+// Reflect
+** Take an image
+** Loop through each pixel up to middway point
+** Swap that pixel with opposite number
+
+for every row
+    for every column up to middway
+        temporarily store the pixel
+        overwrite pixel with that of opposite number
+        overwrite opposite number with temporarily stored pixel
+
+
+// Blur
+** Take an image
+** Loop through each pixel
+** Calculate average of each colour value for every pixel within a column and a row
+** Apply each of those averages to original image
+
+for every row
+    for every column
+        add pixel to copy of image
+
+for every row
+    for every column
+        count pixels
+        hold red values
+        hold green values
+        hold blue values
+
+
+// Edge
+** Take an image
+** Detect and highlight edges between
+items in the image
+
+copy image
+for every column
+    for every row
+        copy pixel from image to copy
+        
+for every column
+    for every row
+        set GxRed
+        set GxGreen
+        set GxBlue
+        
+        set GyRed
+        set GyGreen
+        set GyBlue
+        
+        for every column
+            for every row in a 3 x 3 grid
+                if more than or equal to 0 and if less than or equal to height and if less than or equal to width
+                    times red by relevant number and add to Gx
+                    times green by relevant number and add to Gx
+                    times blue by relevant number and add to Gx
+                
+                    times red by relevant number and add to Gy
+                    times green by relevant number and add to Gy
+                    times blue by relevant number and add to Gy
+    
+    round square root of Gx plus square root of Gy
+    check if over 255 and cap
+    apply to current pixel
+    
+Gx
+-1 0 1
+-2 0 2
+-1 0 1
+
+Gy
+-1 -2 -1
+0 0 0
+1 2 1

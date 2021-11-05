@@ -1,0 +1,2 @@
+/* Return names of all stars of Toy Story */
+SELECT name FROM (SELECT movies.id, movies.title, stars.movie_id, stars.person_id, people.id, people.name FROM movies JOIN stars, people ON movies.id = stars.movie_id WHERE movies.title = "Toy Story" AND stars.person_id = people.id);

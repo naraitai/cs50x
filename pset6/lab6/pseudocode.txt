@@ -1,0 +1,24 @@
+# Teams (Read teams from file into memory)
+
+with open(sys.argv[1]) as file:
+    reader = csv.DictReader(file)
+    teams.append(reader)
+
+for dict in teams:
+    for key in dict:
+        teams[dict] = int(key, base = 10)
+
+# Counts (Keep track of simulations winners)
+if winner in counts:
+    add one to value
+else:
+    add winner to counts
+    set value to 1
+
+counts[team_name] = x
+
+# Simulate Tournamet (Simulate tournament and return winning team)
+if teams is 1:
+    return teams
+
+teams = simulate_round(teams)

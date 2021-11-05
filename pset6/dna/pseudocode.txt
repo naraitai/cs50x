@@ -1,0 +1,74 @@
+Background: DNA sequency is based on STRs, short sequency of dan that repeat consecutively numerous times. By using multiple STRs can improve likely hood that given DNA belongs to given person.
+
+# Write a program that takes sequences of DNA in a CSV file and outputs who the DNA belongs to, most likely.
+
+
+import argv from sys
+
+if arguments is not 3
+    print Usage: ./dna.py DATABASE.txt SEQUENCE.txt
+
+create database list
+open csv file
+    read each person from database.txt as a dictionary into database list
+    name is name
+    AAGT is integer AAGT
+    AGAT is integer AGAT
+    TACT is integer TACT
+
+create dna list
+open dna file
+    write sequence into dna list in blocks of 4 characters
+
+create repeat tuples
+compute longest repeat of AGAT and store
+compute longest repeat of AAGT and store
+compute longest repeat of TACT and store
+
+compare AGAT to all people in database
+    if no match
+        print "No match"
+    else compare AAGT to all people in database
+        if no match
+            print "No match"
+        else compare TACT to all people in database
+            if no match
+                print "No match"
+            else print person
+
+compute longest number of repeat of given STR in given sequence
+    set longest to zero
+    for every block in dna list
+        if match
+            add one to repeat
+    if repeat is greater than longest
+    set longest to repeat
+
+Notes:
+
+reader
+DictReader: create an object that operates like a normal reader, but maps information into each row into an ordered dictionary whose keys are given by optional fieldnames parameters. If blank values are first row of file
+f.read()
+
+len() function.
+s[i:j] takes string and returns substring.
+
+
+ block = len(header)
+    end = len(sequence[0])
+
+    count = 0
+    maximum = 0
+    for i in range(0, end, 1):
+        if sequence[0][i:i + block] == header:
+
+            if sequence[0][i - block: i] == sequence[0][i:i + block]:
+               count += 1
+
+            if sequence[0][i - block: i] != sequence[0][i:i + block] and maximum == 0:
+                    count += 1
+
+            if count > maximum:
+                maximum = count
+
+    return maximum

@@ -1,0 +1,186 @@
+VOTE (rank / name / ranks):
+
+for every rank
+    for every candidate
+        If name is equal to a candidate
+            update ranks with voter rank
+            return true
+    return false
+
+
+RECORD PREFERENCES (ranks):
+ranks array: [0]BOB, [1]ALICE, [2]CHARLIE
+
+if the candidate you're looking at's reference in ranks is lower than other ones is added.
+
+if jth candidate's index in ranks is lower than ith index in ranks jth spot in preferences gets 1.
+
+
+for each candidate-row
+    and for each candidate-column
+        if candidate-column's ranks index is lower than candidate-row's ranks index
+            then preferences candidate-row candidate-column gets 1
+
+
+    row_index
+    column_index
+
+    for each item of ranks
+        if candidate equals item in ranks
+            row_index get i
+
+
+
+
+            rank[0] = candidate-column match
+
+
+
+preferences:
+       Alice  Bob     Charlie
+Alice    0     0        1
+Bob      1     0        1
+
+0,2,1
+ranks[0] = "BOB" / 2
+
+for every rank
+    add 1 to every
+
+    for rank 1
+        add 1 to everyother candidation column
+    for rank 2
+        add 2 to
+
+    add 1 to all remaining candidates
+
+    if voter prefers this candidate
+        add one to jth
+
+Update preferences to add voters preferences
+
+Alice / Bob / Charlie
+
+Voter 1: 0, 2, 1
+Voter 2: 0, 2, 1
+Voter 3: 1, 0, 2
+Voter 4: 1, 2, 0
+
+   0  1  2
+0  0  2  3
+1  2  0  2
+2  1  2  0
+
+0 / 1 = 2 & 1 / 0 = 2 (no pair)
+0 / 2 = 3 & 2 / 0 = 1 (pair - winner: 0 / loser: 2)
+1 / 2 = 2 & 2 / 1 = 2 (no pair)
+Pair count = 1
+
+Sort by margin
+Pair 1: 3 - 1 = 2
+
+Bubble sort
+
+pairs[i] < pairs[i+1
+
+ranks = {2,0,1}
+
+for rank[0]
+
+for every rank (same number as candidates)
+    at preferences[rank[i]][all other candidates]
+        if ranks[i] != i
+        get 1
+
+
+base case is if last element of ranks array
+
+if (i = candidate count)
+    preferences[i][j] = 1
+else
+
+
+ranks: 3, 0, 1, 2
+
+Alice Bob Charlie
+
+Voter 1: 0, 2, 1
+Voter 2: 0, 2, 1
+
+preferences
+    0   1   2
+0   0   2   2
+1   0   0   0
+2   0   2   0
+
+
+if number of prefers for alice is more than number of prefers for charlie
+    add pair[0].winner = alice
+    add pair[0].loser = charlie
+
+
+
+
+
+
+LOCK PAIRS:
+create locked graph
+
+
+Starting with index 0 of pairs array
+for all indeces of pairs
+locked[pairs[0].winner][pairs[0].loser] = true
+
+            Alice   Bob     Charlie
+Alice       false   true    false
+Bob         false   false   true
+Charlie     true    false   false
+
+if locked[0][i] == true && locked[1][2] == true
+
+i > i + 1 = true
+i+1 > i+1+1 = true
+i+1+1 > i = true
+
+loop
+
+
+need to detect when creates a loop
+
+alice > bob = true
+bob > charlie = true
+charlie > alice = true
+
+
+source
+
+
+alice lock = 0
+if (
+
+
+lock counts
+
+0   1   2
+1   1   1
+
+if counts all equal cycle
+
+LOCK PAIRS
+
+repeat until all pairs are evaluated
+    Take a pair
+    Check if cycle is created
+        if yes
+            skip
+        if no
+            lock pair
+
+check if cycle is created
+is loser winner?
+
+for every pair
+    if true
+        take that loser (CALL FUNCTION AGAIN)
+    if false
+        no win, no cycle

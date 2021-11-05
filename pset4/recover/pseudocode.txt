@@ -1,0 +1,66 @@
+// Recover
+** Take a recovery file
+** Find the images
+** Store each image in a new file numbered based on number of image.
+
+// Check and open
+Take 1 command line argument only
+Test for if file can't be opened
+
+open file.
+Look for a Jpeg
+Open new jpg file - FILE *f = fopen(FILE, MODE);
+Write file into that jpg file
+Continue until end of file
+
+
+Generate .jpg file numbered for number of image.
+
+JPEG has a header - 0xFF / 0xD8 / 0xFF / 0xe? (1 to F)
+Stored back to back
+Each block is 512 bytes
+
+Find header write to file
+Find another close old open new
+
+fread(POINTER, SIZE, NUMBER, INPTR);
+buffer[0] == 0xFF etc
+
+bitwise arithmetic (buffer[3] & 0xF0) == 0xe0
+
+sprintf(filename, "%03i.jpg", 2(NUMBER TO SUBSTITUTE INTO NAME);
+
+filename needs enough memory to contain it (malloc)
+
+FILE *img = fopen(filename, "w");
+
+fwrite(DATA, SIZE, NUMBER, OUTPTR);
+
+fread at end of file or not.
+
+Pseudocode
+
+^ Check command line arguments
+^ Open file
+^ Check file opens correctly
+
+^ create block data type
+^ creat buffer of size block
+
+^ Repeat until end
+    ^ Read 512 bytes into buffer
+    ^ If first byte is 0xFF and if 2nd byte it 0xD8 and if 3rd byte is 0xFF and if 4th byte is bitwise arithmetic 0xE0 start of new JPEG
+   ^ jpg counter
+        ^If JPEG counter is 1
+            ^write new file name
+            ^ open file
+            ^ write buffer into file
+        Else
+            ^ close old file
+            ^write new file name
+            ^open new file
+            ^write buffer into file
+    Else
+        If jpq counter is greater than 0
+            Keep writing to JPEG (could be multiple blocks)
+Close all files

@@ -1,0 +1,54 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Account
+{% endblock %}
+
+{% block main %}
+
+
+    <form action="/account" method="POST">
+        <table class="table">
+
+            <tr>
+                <th>Username</th>
+
+                    <td>
+                        <div class="form-group">
+                            <input autocomplete="off" class="form-control" name="username" placeholder="Enter current" type="text">
+                        </div>
+                    </td>
+
+                    <td>
+                        <div class="form-group">
+                            <input autocomplete="off" class="form-control" name="new_username" placeholder="Enter new" type="text">
+                        </div>
+                    </td>
+
+            </tr>
+
+            <tr>
+                <th>Password</th>
+                    <td>
+                        <div class="form-group">
+                            <input autocomplete="off" class="form-control" name="password" placeholder="Enter current" type="password">
+                        </div>
+                    </td>
+
+                    <td>
+                        <div class="form-group">
+                            <input autocomplete="off" class="form-control" name="new_password" placeholder="Enter new" type="password">
+                        </div>
+                    </td>
+            </tr>
+
+
+        </table>
+
+        <button class="btn btn-primary" type="submit" name="username">Edit</button>
+
+        <p>{{ success }}</p>
+
+    </form>
+
+{% endblock %}

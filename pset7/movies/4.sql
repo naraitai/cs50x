@@ -1,0 +1,2 @@
+/* Return number of movies with rating of 10.0 */
+SELECT COUNT(title) FROM (SELECT movies.id, ratings.movie_id, movies.title, ratings.rating FROM movies JOIN ratings ON movies.id = ratings.movie_id WHERE ratings.rating = 10.0);
