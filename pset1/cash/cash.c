@@ -1,3 +1,26 @@
+/*---------------------------------
+Task 5 of 6
+
+Brief
+- Calculate minimum number of coins required to make up change
+- Take user input change due amount
+- Print minimmum number of coins required (US coinage)
+
+Expected output
+
+    Change owed: 0.41
+    4
+
+Distribution code
+- None
+
+Non Standard Libraries:
+- cs50.h
+
+Key concept:
+- Dealing with floating point values in C
+-----------------------------------*/
+
 #include <stdio.h>
 #include <cs50.h>
 #include <math.h>

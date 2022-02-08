@@ -1,3 +1,30 @@
+"""---------------------------------
+Task 8 of 8
+
+Brief
+- Implement a program that identifies a person based on their DNA
+- Use Short Tandem Repeats (STRs) to find matches
+- Require csv file as command-line argument
+- Require a DNA sequence file as second command-line argument
+- Open csv file and read content to memory
+- Open sequence file and read content to memory
+- Compute longest run of consecutive repeats of STR in sequence
+- Print out match if any found
+- Otherwise print out 'No match'
+
+Expected output
+     
+    python dna.py databases/large.csv sequences/5.txt
+    Lavender
+    
+Distribution code
+- databases (dir)
+- sequences (dir)
+
+Key concept:
+- Arrays
+-----------------------------------"""
+
 import sys
 import csv
 

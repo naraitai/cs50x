@@ -1,3 +1,41 @@
+/*---------------------------------
+Task 2 of 4
+
+Brief
+- Implement a program that runs a plurality election
+- Plurality election
+    - a.k.a first-past-the-post
+    - Each voter votes for one candidate
+    - Whichever has the greatest number of votes is declared the winner
+- Complete vote function
+    - Take single argument. The candidates name
+    - Add vote to candidates total if there is a match
+- Complete print_winner function
+    - Print out name of candidate with most votes
+    - Ties are possible. Output each tieing candidate
+
+Expected output
+
+    ./plurality Alice Bob
+    Number of voters: 3
+    Vote: Alice
+    Vote: Bob
+    Vote: Alice
+    Alice
+
+Distribution code
+- Shown as follows 
+    >>>>>Distribution code start<<<<<
+    >>>>>>Distribution code end<<<<<<
+
+Non Standard Libraries:
+- cs50.h
+
+Key concept:
+- Algorithms
+-----------------------------------*/
+
+/*>>>>>Distribution code start<<<<<*/
 #include <cs50.h>
 #include <stdio.h>
 #include <string.h>
@@ -62,6 +100,7 @@ int main(int argc, string argv[])
     // Display winner of election
     print_winner();
 }
+/*>>>>>>Distribution code end<<<<<<*/
 
 // Update vote totals given a new vote
 bool vote(string name)

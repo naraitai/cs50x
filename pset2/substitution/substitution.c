@@ -1,3 +1,34 @@
+/*---------------------------------
+Task 4 of 4
+
+Brief
+- Implement a substitution cipher
+- Substitution cipher
+    - Replace every letter with another letter. 
+    - Letters are replaced based on a key 
+- Accept key as a command line argument (e.g. NQXPOMAFTRHLZGECYJIUWSKDVB)
+- Prompt for plaintext
+- Encrypt by substiution letters following input key. (e.g. A = N)
+- Output ciphertext
+- Preserve case and non-alphabetical characerts
+
+Expected output
+
+    ./substitution VCHPRZGJNTLSKFBDQWAXEUYMOI
+    plaintext: hello, world
+    ciphertext: jrssb, ybwsp
+
+Distribution code
+- None
+
+Non Standard Libraries:
+- cs50.h
+
+Key concept:
+- Encryption
+- Command line arguments
+-----------------------------------*/
+
 #include <stdio.h>
 #include <cs50.h>
 #include <string.h>

@@ -1,3 +1,60 @@
+/*---------------------------------
+Task 3 of 4
+
+Brief
+- Implement a program that runs a runoff election
+- Runoff election
+    - a.k.a ranked-choice voting system
+    - Voters can rank candidates in order of preference
+    - Candiate with majority of first preference wins
+    - If no candidate has majority candidate with fewest votes is elmininated
+    - Voters who chose eliminated candidate as first choice have second choice used
+    - This repeats until a candidate has a majority
+- Candidates tieing for last place are all elminated
+- All voters should rank all candidates
+- Complete vote function
+    - Takes voter, rank and name as arguments
+    - If name matches valid candidate update preference array
+- Complete tabulate function
+    - Updates number of votes each candidate has
+- Complete print_winner function
+    - Print winner and function returns true if candidate has majority
+    - If no winner yet return false
+- Complete find_min function
+    - Returns minimum vote total for candidates in election
+- Complete is_tie function
+    - Takes min as argument. This is the minimum number of votes
+    - Return true if every candidate remaining has the same number of votes
+    - Return false otherwise
+- Complete eliminate function
+    - Takes min as ragument. This is the minimum number of votes
+    - Eliminate the candidate(s) who has the minimum number of votes
+
+Expected output
+
+    ./runoff Alice Bob Charlie
+    Number of voters: 5
+    Rank 1: Alice
+    Rank 2: Charlie
+    Rank 3: Bob
+
+    ...
+    
+    Alice
+
+Distribution code
+- Shown as follows 
+    >>>>>Distribution code start<<<<<
+    >>>>>>Distribution code end<<<<<<
+
+Non Standard Libraries:
+- cs50.h
+
+Key concept:
+- Algorithms
+-----------------------------------*/
+
+/*>>>>>Distribution code start<<<<<*/
 #include <cs50.h>
 #include <stdio.h>
 #include <string.h>
@@ -124,6 +181,7 @@ int main(int argc, string argv[])
     }
     return 0;
 }
+/*>>>>>>Distribution code end<<<<<<*/
 
 // Record preference if vote is valid
 bool vote(int voter, int rank, string name)

@@ -1,3 +1,21 @@
+/*---------------------------------
+Task 3 of 3
+
+Brief
+- Write a series of queries to solve the mystery
+- Answer the following questions
+    - Who is the thief?
+    - What city did the thief escape to?
+    - Who is the thief's accomplice who helped them escape?
+
+Distribution code
+- fiftyville.db
+- log.sql
+
+Key concept:
+- SQL queries
+-----------------------------------*/
+
 -- Keep a log of any SQL queries you execute as you solve the mystery.
 
 -- Details:

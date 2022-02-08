@@ -1,3 +1,33 @@
+/*---------------------------------
+Task 6 of 6
+
+Brief
+- Implement Luhn's Algorithm to validate input credit card number
+- Algorithm
+    - Start with the second-to-last digit, multiply every other digit by 2.
+    - Add these results together
+    - Add all remaining numbers together
+    - Add these two sums together
+    - If last digit is 0 the number is valid
+- Prompt user for a credit card number
+- Return whether number if American Express, MasterCard or Visa
+- Return INVALID if number not valid
+
+Expected output
+
+    Number: 4003600000000014
+    VISA
+
+Distribution code
+- None
+
+Non Standard Libraries:
+- cs50.h
+
+Key concept:
+- Basic C syntax
+-----------------------------------*/
+
 #include <stdio.h>
 #include <cs50.h>
 #include <string.h>

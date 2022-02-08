@@ -1,3 +1,24 @@
+/*---------------------------------
+Task 4 of 4
+
+Brief
+- Write a program that recovers JPEGs from a forensic image
+- Accept one command-line argument (name of forensic image)
+- Generate each .jpeg image found in file
+- File names should be ###.jpg
+- Do not leak any memory
+
+Expected output
+
+    ./recover card.raw
+    
+Distribution code
+- card.raw
+
+Key concept:
+- Memory management
+-----------------------------------*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdint.h>

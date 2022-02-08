@@ -1,3 +1,33 @@
+/*---------------------------------
+Task 3 of 4
+
+Brief
+- Implement Ceasar's cipher
+- Ceasar's cipher
+    - Encrypts message by shifting each letter
+    - Letter is shifted by a specified key
+    - Shifted letters wrap round back to the beginning of the alphabet
+- Accept key as a command line argument (not negative integer)
+- Prompt for plaintext
+- Output ciphertext
+-  Ensure it is case-sensitive
+
+Expected output
+
+    plaintext: HELLO
+    ciphertext: URYYB
+
+Distribution code
+- None
+
+Non Standard Libraries:
+- cs50.h
+
+Key concept:
+- Encryption
+- Command line arguments
+-----------------------------------*/
+
 #include <stdio.h>
 #include <cs50.h>
 #include <string.h>

@@ -1,3 +1,25 @@
+"""---------------------------------
+Task 5 of 8
+
+Brief
+- Python version of pset1 cash.c
+- Return minimum number of coins needed to give change (US coinage)
+
+Expected output
+     
+    Change owed: 0.41
+    4
+    
+Distribution code
+- None
+
+None Standard Libraries
+- cs50
+
+Key concept:
+- Nested for loops
+-----------------------------------"""
+
 from cs50 import get_float
 
 # Dictionary of coins and their values

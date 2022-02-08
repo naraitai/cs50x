@@ -1,9 +1,38 @@
+/*---------------------------------
+Task 1 of 4
+
+Brief
+- Determine which of two Scrabble words scores highest
+- Print Player 1 wins! / Player 2 wins! / Tie!
+
+Expected output
+
+    Player 1: Computer
+    Player 2: Science
+    Player 1 wins!
+
+Distribution code
+- Shown as follows 
+    >>>>>Distribution code start<<<<<
+    >>>>>>Distribution code end<<<<<<
+
+Non Standard Libraries:
+- cs50.h
+
+Key concept:
+- Arrays
+-----------------------------------*/
+
+/*>>>>>Distribution code start<<<<<*/
 #include <ctype.h>
 #include <cs50.h>
 #include <stdio.h>
 #include <string.h>
+/*>>>>>>Distribution code end<<<<<<*/
+
 #include <ctype.h>
 
+/*>>>>>Distribution code start<<<<<*/
 // Points assigned to each letter of the alphabet
 int POINTS[] = {1, 3, 3, 2, 1, 4, 2, 4, 1, 8, 5, 1, 3, 1, 1, 3, 10, 1, 1, 1, 1, 4, 4, 8, 4, 10};
 
@@ -18,6 +47,7 @@ int main(void)
     // Score both words
     int score1 = compute_score(word1);
     int score2 = compute_score(word2);
+/*>>>>>>Distribution code end<<<<<<*/
 
     // Print the winner
     if (score1 == score2)

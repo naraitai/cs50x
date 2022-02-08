@@ -1,11 +1,64 @@
+/*---------------------------------
+Task 2 of 2
+
+Brief
+- Implement a program the spell-checks a file using a hash table
+- Implement load
+- Implement hash
+- Implement size
+- Implement check
+- Implement unload
+- Implement as efficiently as possible with a hash table
+
+Expected output
+    
+    ./speller texts/lalaland.txt
+    MISSPELLED WORDS
+
+[...]
+AHHHHHHHHHHHHHHHHHHHHHHHHHHHT
+[...]
+Shangri
+[...]
+fianc
+[...]
+Sebastian's
+[...]
+
+WORDS MISSPELLED:
+WORDS IN DICTIONARY:
+WORDS IN TEXT:
+TIME IN load:
+TIME IN check:
+TIME IN size:
+TIME IN unload:
+TIME IN TOTAL:
+    
+Distribution code
+- Shown as follows 
+    >>>>>Distribution code start<<<<<
+    >>>>>>Distribution code end<<<<<<
+- dictionaries (dir)
+- keys (dir)
+- text (dir)
+- dictionary.h
+- Makefile
+- speller.c
+
+Key concept:
+- Data structures
+-----------------------------------*/
+
 // Implements a dictionary's functionality
 
-#include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <strings.h>
 #include <ctype.h>
+
+/*>>>>>Distribution code start<<<<<*/
+#include <stdbool.h>
 
 #include "dictionary.h"
 
@@ -22,6 +75,7 @@ const unsigned int N = 17576;
 
 // Hash table
 node *table[N];
+/*>>>>>>Distribution code end<<<<<<*/
 
 // Returns true if word is in dictionary, else false
 bool check(const char *word)

@@ -1,0 +1,121 @@
+<!---------------------------------
+Task 1 of 2
+
+Brief
+- Write a webpage that lets users answer trivia questions
+- Complete HTML implementation for trivia questions
+- Use JavaScript to change button colours when user clicks
+    - Incorrect answer, button = red
+    - Correct answer, button = green
+- Use JavaScript to change the text field colour
+    - Incorrect answer, field = red
+    - Correct answer, field = green
+
+Distribution code
+- index.html (parts)
+- styles.css
+
+Key concept:
+- Basic HTML, CSS and JavaScript
+----------------------------------->
+<!-- DISTRIBUTION CODE START -->
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+<!-- DISTRIBUTION CODE END -->
+
+        <script>
+
+            // Code to check answers to questions
+            function check_multiple() {
+
+                let a = document.querySelector('#a');
+                let b = document.querySelector('#b');
+                let c = document.querySelector('#c');
+                let result = document.querySelector('#result');
+
+                document.querySelector('#a').onclick = function() {
+                    a.style.backgroundColor = 'green';
+                    result.innerHTML = 'Correct!';
+                };
+
+                document.querySelector('#b').onclick = function() {
+                    b.style.backgroundColor = 'red';
+                    result.innerHTML = 'Incorrect';
+                };
+
+                document.querySelector('#c').onclick = function() {
+                    c.style.backgroundColor = 'red';
+                    result.innerHTML = 'Incorrect';
+                };
+
+            }
+
+
+            function check_free() {
+
+                document.querySelector('#fanswer').onclick = function() {
+                    let input = document.querySelector('input');
+                    let status = document.querySelector('#status');
+
+                    if (input.value == 'octothorpe') {
+                        input.style.backgroundColor = 'green';
+                        status.innerHTML = 'Correct!';
+                    }
+                    else {
+                        input.style.backgroundColor = 'red';
+                        status.innerHTML = 'Incorrect';
+                    }
+                };
+            }
+
+            document.addEventListener('DOMContentLoaded', check_multiple);
+            document.addEventListener('DOMContentLoaded', check_free);
+
+
+        </script>
+    </head>
+<!-- DISTRIBUTION CODE START -->
+    <body>
+
+        <div class="jumbotron">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+<!-- DISTRIBUTION CODE END -->
+
+                <!-- Multiple choice and answers -->
+                <h3>The 100 folds of a chef's hat represent the 100 ways to cook what?</h3>
+                <p id = "result"></p>
+
+                <button id = "a">An egg</button>
+                <button id = "b">A carrot</button>
+                <button id = "c">A cake</button>
+
+
+            </div>
+<!-- DISTRIBUTION CODE START -->
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+<!-- DISTRIBUTION CODE END -->
+                <!-- Free response question and answer -->
+                <h3>What is the technical name for a hashtag (#)?</h3>
+                <p id = "status"></p>
+
+                <input>
+                <button id = "fanswer">Submit</button>
+
+            </div>
+        </div>
+    </body>
+</html>

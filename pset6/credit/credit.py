@@ -1,3 +1,28 @@
+"""---------------------------------
+Task 6 of 8
+
+Brief
+- Python version of pset1 credit.c
+- Implement Luhn's algorithm
+- Validate a user input credit card number
+- Return whether American Express / MasterCard / Visa or Invalid
+
+Expected output
+     
+    Number: 378282246310005
+    AMEX
+    
+Distribution code
+- None
+
+None Standard Libraries
+- cs50
+
+Key concept:
+- Floating point values
+- Algorithms
+-----------------------------------"""
+
 from cs50 import get_int
 
 # Prompt user until number input

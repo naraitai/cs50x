@@ -1,3 +1,65 @@
+/*---------------------------------
+Task 4 of 4
+
+Brief
+- Implement a program that runs a Tideman election
+- Tideman election
+    - a.k.a ranked pairs voting system
+    - Based on the winner of head-to-head elections
+    - Determine for each pair of candidate the preferred candidate
+    - Record margin by which they were preferred
+    - Sort the pairs in decreasing order base on margin
+    - Start from strongest pair lock in pairs of candidates
+    - Do not create a cycle in the graph.
+- Implemented by creating graph
+- This records who wins against whom
+- Source of graph is the election winner
+- Complete vote function
+    - Takes rank, name and ranks as arguments
+    - If name is a candidate update the ranks array
+- Complete record_preferences function
+    - Called once for each voter
+    - Takes ranks array as argument
+    - Updates global preferences array adding the current voter's preference
+- Complete add_pairs function
+    - Add pairs of candidates where one candidate is preferred
+    - Ties are not added
+    - Update pair_count
+- Complete sort_pairs function
+    - Sort pairs array in decreasing order of strength of victory
+- Complete lock_pairs function
+    - Creates locked graph
+    - Add all edges (showing winner of pairs)
+    - Does not add if cycle would be created
+- Complete print_winner function
+    - Print out name of the candidate with is the source of the graph
+    - Assume only one source
+
+Expected output
+
+    ./tideman Alice Bob Charlie
+    Number of voters: 5
+    Rank 1: Alice
+    Rank 2: Charlie
+    Rank 3: Bob
+
+    ...
+    
+    Charlie
+
+Distribution code
+- Shown as follows 
+    >>>>>Distribution code start<<<<<
+    >>>>>>Distribution code end<<<<<<
+
+Non Standard Libraries:
+- cs50.h
+
+Key concept:
+- Algorithms
+-----------------------------------*/
+
+/*>>>>>Distribution code start<<<<<*/
 #include <cs50.h>
 #include <stdio.h>
 #include <string.h>
@@ -97,6 +159,7 @@ int main(int argc, string argv[])
     print_winner();
     return 0;
 }
+/*>>>>>>Distribution code end<<<<<<*/
 
 // Update ranks given a new vote
 bool vote(int rank, string name, int ranks[])

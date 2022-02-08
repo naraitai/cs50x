@@ -1,3 +1,62 @@
+"""---------------------------------
+Task 2 of 2
+
+Brief
+- Build a flask web application to allows users to buy and sell stocks (demo)
+- Complete register
+    - Require username
+    - Require password
+    - Submit data via POST to /register
+    - Log user in
+- Complete quote
+    - Require user to input a stock's symbol
+    - Submit via POST to /quote
+- Complete buy
+    - Require user to input a stock's symbol
+    - Require user to input number of stocks
+    - Submit via POST to /buy
+    - Lookup stock price
+    - Check amount of cash user has left
+    - Add data to database
+    - Return apology if can't afford it
+- Complete index
+    - Display HTML table summarising 
+        - Owned stocks and number of shares
+        - Current price of stock
+        - Total value
+        - Current cash balance
+        - Grand total (cash plus stock value)
+- Complete sell
+    - Allow users to sell stocks
+    - Require a stock's symbol
+    - Require number of shares to sell
+    - Submit via POST to /sell
+- Complete history
+    - Display HTML table summarising all transactions
+    - Make clear whether stock was bought or sold
+    - Include stock's symbole, purchase/sale price and number of shares
+- Implement a minimum of one personal touch (implement change password feature)
+
+Distribution code
+- favicon
+- styles.css
+- apology.html
+- layout.html
+- login.html
+- finance.db
+- requirement.txt
+- helpers.py
+- Shown as follows 
+    >>>>>Distribution code start<<<<<
+    >>>>>>Distribution code end<<<<<<
+
+None Standard Libraries
+cs50
+
+Key concept:
+- Basic HTML, CSS and JavaScript
+-----------------------------------"""
+#>>>>>Distribution code start<<<<<
 import os
 
 from cs50 import SQL
@@ -51,6 +110,7 @@ if not os.environ.get("API_KEY"):
 def index():
     abort(500)
     """Show portfolio of stocks"""
+#>>>>>>Distribution code end<<<<<<
 
     # Query for index table contents
     portfolio = db.execute("SELECT * FROM portfolio WHERE user_id = ?", session["user_id"])
@@ -66,11 +126,12 @@ def index():
     # Pass index table contents to index page
     return render_template("index.html", portfolio=portfolio, cash=cash, lookup=lookup, total=total)
 
-
+#>>>>>>Distribution code start<<<<<<
 @app.route("/buy", methods=["GET", "POST"])
 @login_required
 def buy():
     """Buy shares of stock"""
+#>>>>>>Distribution code end<<<<<<
 
     # User reacher route via POST
     if request.method == "POST":
@@ -132,11 +193,12 @@ def buy():
     else:
         return render_template("/buy.html")
 
-
+#>>>>>>Distribution code start<<<<<<
 @app.route("/history")
 @login_required
 def history():
     """Show history of transactions"""
+#>>>>>>Distribution code end<<<<<<
 
     # Query transaction table for user transactions
     history = db.execute("SELECT * FROM transactions WHERE user_id = ?", session["user_id"])
@@ -199,7 +261,7 @@ def account():
 
         return render_template("account.html", user=user, password=password)
 
-
+#>>>>>>Distribution code start<<<<<<
 @app.route("/login", methods=["GET", "POST"])
 def login():
     """Log user in"""
@@ -246,11 +308,11 @@ def logout():
     # Redirect user to login form
     return redirect("/")
 
-
 @app.route("/quote", methods=["GET", "POST"])
 @login_required
 def quote():
     """Get stock quote."""
+#>>>>>>Distribution code end<<<<<<
 
     # User reached route via POST (submitting form via POST)
     if request.method == "POST":
@@ -272,10 +334,11 @@ def quote():
     else:
         return render_template("/quote.html")
 
-
+#>>>>>>Distribution code start<<<<<<
 @app.route("/register", methods=["GET", "POST"])
 def register():
     """Register user"""
+#>>>>>>Distribution code end<<<<<<
 
     # User reached route via POST (as by submitting a form via POST)
     if request.method == "POST":
@@ -309,11 +372,12 @@ def register():
     else:
         return render_template("register.html")
 
-
+#>>>>>>Distribution code start<<<<<<
 @app.route("/sell", methods=["GET", "POST"])
 @login_required
 def sell():
     """Sell shares of stock"""
+#>>>>>>Distribution code end<<<<<<
 
     # User reached route via POST
     if request.method == "POST":
@@ -368,13 +432,13 @@ def sell():
 
                 return redirect("/")
 
-    # User reacher rout via GET
+    # User reached route via GET
     else:
         symbols = db.execute("SELECT symbol FROM portfolio WHERE user_id = ?", session["user_id"])
 
         return render_template("/sell.html", symbols=symbols)
 
-
+#>>>>>>Distribution code start<<<<<<
 def errorhandler(e):
     """Handle error"""
     if not isinstance(e, HTTPException):
@@ -385,3 +449,4 @@ def errorhandler(e):
 # Listen for errors
 for code in default_exceptions:
     app.errorhandler(code)(errorhandler)
+#>>>>>>Distribution code end<<<<<<

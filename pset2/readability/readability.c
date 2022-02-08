@@ -1,3 +1,35 @@
+/*---------------------------------
+Task 2 of 4
+
+Brief
+- Implement Coleman-Liau formula
+- Formula
+    - index = 0.0588 * L - 0.296 * S - 15.8
+    - L = average number of letter per 100 words
+    - S = average number of sentence per 100 words
+- Prompt user for string
+- Count number of letters, words and sentences in text
+- Output 'Grade X'
+- If index is 16+ output 'Grade 16+'
+- If index is less than 1 output 'Before Grade 1'
+- For this task a word is any sequence of characters separated by a space
+- For this task any sequence ending with . or ! or ? is a sentence
+
+Expected output
+
+    Text: <user input text>
+    Grade <index of text>
+
+Distribution code
+- None
+
+Non Standard Libraries:
+- cs50.h
+
+Key concept:
+- Arrays (strings as arrays of chars)
+-----------------------------------*/
+
 #include <stdio.h>
 #include <cs50.h>
 #include <ctype.h>

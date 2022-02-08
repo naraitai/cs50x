@@ -1,3 +1,27 @@
+"""---------------------------------
+Task 7 of 8
+
+Brief
+- Python version of pset2 readability
+- Compute approximate grade level needed to understand a text
+- Implement the Coleman-Liau index
+
+Expected output
+     
+    Text: <user input text>
+    Grade <integer>
+    
+Distribution code
+- None
+
+None Standard Libraries
+- cs50
+
+Key concept:
+- Arrays
+- Algorithms
+-----------------------------------"""
+
 from cs50 import get_string
 
 text = get_string("Text: ")
