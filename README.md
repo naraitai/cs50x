@@ -233,7 +233,50 @@ Implement a program that runs a Tideman election
     Rank 3: Bob
     ...
     Charlie
-</details> 
+</details>
+</details>
+    
+## Problem Set 4 (Memory)  
+<details>
+    <summary>Expand</summary>
+
+### 1. Volume
+<details>
+    <summary>Info</summary>
+    
+#### Brief
+Write a program that modifies audio file's volume. Do not leak any memory
+#### Expected output
+    ./volumn input.wav output.wav 2.0
+</details>
+    
+### 2. Filter (Less)
+<details>
+    <summary>Info</summary>
+     
+#### Brief
+Write a program that applies filters to BMPs. Implement function in helpers.c file. Complete grayscale, sepia, reflect and blur filter functions.
+#### Expected output
+    ./filter -r image.bmp reflected.bmp
+</details>
+
+### 3. Filter (More)
+<details>
+    <summary>Info</summary>
+   
+#### Brief
+Write a program that applies filters to BMPs. Implement functions in helpers.c file. Complete grayscale, reflect, blur and edges filter functions.
+#### Expected output
+    ./filter -r image.bmp reflected.bmp
+</details>
+
+### 4. Recover
+<details>
+    <summary>Info</summary>
+    
+#### Brief
+Write a program that recovers JPEGs from a forensic image. Generate each .jpeg image found in file. Do not leak any memory
+</details>
 </details>
     
     
