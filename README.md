@@ -95,7 +95,7 @@ or invalid.
 </details>
 </details>
 
-## Problem Set 2 (C)
+## Problem Set 2 (Arrays)
 <details>
     <summary>Expand</summary>
     
@@ -156,3 +156,84 @@ Implement a substitution cipher
     ciphertext: jrssb, ybwsp
 </details>    
 </details>
+    
+## Problem Set 3 (Algorithms)
+<details>
+    <summary>Expand</summary>
+    
+### 1. Sort
+<details>
+    <summary>Info</summary>
+    
+#### Brief
+Analyse three sorting programs to determine which algorithm they use based on run-time.
+</details>
+    
+### 2. Plurality
+<details>
+    <summary>Info</summary>
+    
+#### Brief
+Implement a program that runs a plurality election
+- Plurality election
+    - a.k.a first-past-the-post
+    - Each voter votes for one candidate
+    - Whichever has the greatest number of votes is declared the winner
+#### Expected output
+    ./plurality Alice Bob
+    Number of voters: 3
+    Vote: Alice
+    Vote: Bob
+    Vote: Alice
+    Alice
+</details>
+    
+### 3. Runoff
+<details>
+    <summary>Info</summary>
+
+#### Brief
+Implement a program that runs a runoff election
+- Runoff election
+    - a.k.a ranked-choice voting system
+    - Voters can rank candidates in order of preference
+    - Candiate with majority of first preference wins
+    - If no candidate has majority candidate with fewest votes is elmininated
+    - Voters who chose eliminated candidate as first choice have second choice used
+    - This repeats until a candidate has a majority
+#### Expected output
+    ./runoff Alice Bob Charlie
+    Number of voters: 5
+    Rank 1: Alice
+    Rank 2: Charlie
+    Rank 3: Bob
+    ...
+    Alice
+</details>
+
+### 4. Tideman 
+<details>
+    <summary>Info</summary>
+    
+#### Brief
+Implement a program that runs a Tideman election
+- Tideman election
+    - a.k.a ranked pairs voting system
+    - Based on the winner of head-to-head elections
+    - Determine for each pair of candidate the preferred candidate
+    - Record margin by which they were preferred
+    - Sort the pairs in decreasing order base on margin
+    - Start from strongest pair lock in pairs of candidates
+    - Do not create a cycle in the graph.
+#### Expected output
+    ./tideman Alice Bob Charlie
+    Number of voters: 5
+    Rank 1: Alice
+    Rank 2: Charlie
+    Rank 3: Bob
+    ...
+    Charlie
+</details> 
+</details>
+    
+    
