@@ -279,4 +279,53 @@ Write a program that recovers JPEGs from a forensic image. Generate each .jpeg i
 </details>
 </details>
     
+## Problem Set 5 (Data Structures)
+<details>
+    <summary>Expand</summary>    
+    
+### 1. Inheritance
+<details>
+    <summary>Info</summary>
+    
+#### Brief
+Simulate the inheritance of blood types for each member of a family. Complete inheritance.c
+#### Expected output
+    Generation 0, blood type OO
+        Generation 1, blood type AO
+        Generation 2, blood type BO
+    Generation 1, blood type OB
+        Generation 2, blood type AO
+        Generation 2, blood type BO
+</details>
+    
+### 2. Speller
+<details>
+    <summary>Info</summary>
+    
+#### Brief
+Implement a program the spell-checks a file using a hash table. Implement as efficiently as possible.
+#### Expected output
+    ./speller texts/lalaland.txt
+    MISSPELLED WORDS
+    [...]
+    AHHHHHHHHHHHHHHHHHHHHHHHHHHHT
+    [...]
+    Shangri
+    [...]
+    fianc
+    [...]
+    Sebastian's
+    [...]
+
+    WORDS MISSPELLED:
+    WORDS IN DICTIONARY:
+    WORDS IN TEXT:
+    TIME IN load:
+    TIME IN check:
+    TIME IN size:
+    TIME IN unload:
+    TIME IN TOTAL:
+</details>
+</details>
+    
     
