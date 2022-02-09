@@ -502,3 +502,16 @@ Build a flask web application to keep track of friends' birthdays
 Build a flask web application to allows users to buy and sell stocks (demo)
 </details> 
 </details> 
+    
+## Problem Set 10 (Ethics) (Not Included)
+<details>
+    <summary>Expand</summary>
+    
+### 1. Ethics
+#### Brief
+Read two articles and complete a quiz on ethics in Computer Science.
+### 2. Final Project
+#### Brief
+Any project using knowledge gained in course. Develop a project that solves an actual project and can be useful outside of CS50x. 
+- Final project: Ankimate see https://github.com/naraitai/ankimate
+</details> 
