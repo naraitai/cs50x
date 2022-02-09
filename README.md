@@ -325,7 +325,112 @@ Implement a program the spell-checks a file using a hash table. Implement as eff
     TIME IN size:
     TIME IN unload:
     TIME IN TOTAL:
+</details>  
 </details>
+    
+## Problem Set 6 (Python)
+<details>
+    <summary>Expand</summary>
+
+### 1. World Cup
+<details>
+    <summary>Info</summary>
+
+#### Brief
+Write program that simulates the FIFA World Cup.
+#### Expected output
+    python tournament.py 2018m.csv
+    Belgium: 20.9% chance of winning
+    Brazil: 20.3% change of winning
+    ...
+</details>  
+    
+### 2. Hello
+<details>
+    <summary>Info</summary>
+
+#### Brief
+Python version of pset1 hello.c. Greet user.
+#### Expected output
+    What is your name?
+    David
+    hello, David
 </details>
+    
+### 3. Mario (Less)
+<details>
+    <summary>Info</summary>
+
+#### Brief
+Python version of pset1 mario_less.c. Print a right aligned pyramid of hashes
+#### Expected output
+             #
+            ##
+           ###
+          ####
+         #####
+        ######
+</details>  
+
+### 4. Mario (More)
+<details>
+    <summary>Info</summary>
+    
+#### Brief
+Python version of pset1 mario_more. Print a full pyramid of hashes
+#### Expected output
+             # #
+            ## ##
+           ### ###
+          #### ####
+         ##### #####
+        ###### ######
+</details>  
+    
+### 5. Cash
+<details>
+    <summary>Info</summary>
+    
+#### Brief
+Python version of pset1 cash.c. Return minimum number of coins needed to give change (US coinage)
+#### Expected output
+    Change owed: 0.41
+    4
+</details>
+    
+### 6. Credit
+<details>
+    <summary>Info</summary>
+    
+#### Brief
+Python version of pset1 credit.c. Implement Luhn's algorithm. Validate a user input credit card number
+#### Expected output
+    Number: 378282246310005
+    AMEX
+</details>  
+
+### 7. Readability
+<details>
+    <summary>Info</summary>
+   
+#### Brief
+Python version of pset2 readability. Compute approximate grade level needed to understand a text. Implement the Coleman-Liau index
+#### Expected output
+    Text: <user input text>
+    Grade <integer>
+</details> 
+    
+### 8. DNA
+<details>
+    <summary>Info</summary>
+    
+#### Brief
+Implement a program that identifies a person based on their DNA. Use Short Tandem Repeats (STRs) to find matches
+#### Expected output
+    python dna.py databases/large.csv sequences/5.txt
+    Lavender
+</details> 
+</details> 
+
     
     
