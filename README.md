@@ -481,6 +481,24 @@ Write a webpage that lets users answer trivia questions. Complete HTML implement
 Build a simple homepage with HTML, CSS and JavaScript.
 </details> 
 </details> 
+    
+## Problem Set 9 (Flask)
+<details>
+    <summary>Expand</summary>
 
+### 1. Birthdays
+<details>
+    <summary>Info</summary>
     
+#### Brief
+Build a flask web application to keep track of friends' birthdays
+</details> 
     
+### 2. Finance
+<details>
+    <summary>Info</summary>
+    
+#### Brief
+Build a flask web application to allows users to buy and sell stocks (demo)
+</details> 
+</details> 
