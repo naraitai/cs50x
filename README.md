@@ -438,7 +438,7 @@ Implement a program that identifies a person based on their DNA. Use Short Tande
 
 ### 1. Songs
 <details>
-    <summary>Expand</summary>
+    <summary>Info</summary>
     
 #### Brief
 Write a series of queries to answer questions about a database of songs
@@ -446,7 +446,7 @@ Write a series of queries to answer questions about a database of songs
     
 ### 2. Movies
 <details>
-    <summary>Expand</summary>
+    <summary>Info</summary>
     
 #### Brief
 Write a series of queries to answer questions about a database of movies
@@ -454,10 +454,31 @@ Write a series of queries to answer questions about a database of movies
     
 ### 3. Fiftyville 
 <details>
-    <summary>Expand</summary>
+    <summary>Info</summary>
     
 #### Brief
 Write a series of queries to solve the mystery. Answer the following questions: Who is the thief? What city did the thief escape to? Who is the thief's accomplice who helped them escape?
+</details> 
+</details> 
+    
+## Problem Set 8 (HTML, CSS, JavaScript)
+<details>
+    <summary>Expand</summary>
+    
+### 1. Trivia
+<details>
+    <summary>Info</summary>
+    
+#### Brief
+Write a webpage that lets users answer trivia questions. Complete HTML implementation for trivia questions. Use JavaScript to change button and text field colours when user clicks.
+</details>
+    
+### 2. Homepage
+<details>
+    <summary>Info</summary>
+    
+#### Brief
+Build a simple homepage with HTML, CSS and JavaScript.
 </details> 
 </details> 
 
