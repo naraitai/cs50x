@@ -431,6 +431,35 @@ Implement a program that identifies a person based on their DNA. Use Short Tande
     Lavender
 </details> 
 </details> 
+    
+## Problem Set 7 (SQL)
+<details>
+    <summary>Expand</summary>
+
+### 1. Songs
+<details>
+    <summary>Expand</summary>
+    
+#### Brief
+Write a series of queries to answer questions about a database of songs
+</details> 
+    
+### 2. Movies
+<details>
+    <summary>Expand</summary>
+    
+#### Brief
+Write a series of queries to answer questions about a database of movies
+</details> 
+    
+### 3. Fiftyville 
+<details>
+    <summary>Expand</summary>
+    
+#### Brief
+Write a series of queries to solve the mystery. Answer the following questions: Who is the thief? What city did the thief escape to? Who is the thief's accomplice who helped them escape?
+</details> 
+</details> 
 
     
     
